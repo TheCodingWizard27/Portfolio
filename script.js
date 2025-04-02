@@ -50,3 +50,40 @@ function initTypingEffect() {
 
   type();
 }
+
+// Function for smooth scrolling
+function initScrollEvents() {
+  const nav = document.querySelector("nav");
+  const sections = document.querySelectorAll("section");
+  const animatedElements = document.querySelectorAll(
+    ".project-card, .hero-text"
+  );
+
+  function isInView(el) {
+    const rect = el.getBoundingClientRect();
+    return rect.top <= window.innerHeight * 0.85 && rect.bottom >= 0;
+  }
+
+  function onScroll() {
+    nav.classList.toggle("scrolled", window.scrollY > 50);
+
+    sections.forEach((section) => {
+      const sectionTop = section.offsetTop - 120;
+      const sectionId = section.getAttribute("id");
+      if (
+        window.scrollY >= sectionTop &&
+        window.scrollY < sectionTop + section.offsetHeight
+      ) {
+        document.querySelectorAll(".nav-left a").forEach((link) => {
+          link.classList.toggle(
+            "active",
+            link.getAttribute("href") === `#${sectionId}`
+          );
+        });
+      }
+    });
+  }
+
+  window.addEventListener("scroll", onScroll);
+  onScroll();
+}
