@@ -42,7 +42,6 @@ function initTypingEffect() {
     else if (isDeleting && charIndex === 0) {
       isDeleting = false;
       phraseIndex = (phraseIndex + 1) % phrases.length;
-      delay = 200;
     }
 
     setTimeout(type, delay);
