@@ -87,3 +87,22 @@ function initScrollEvents() {
   window.addEventListener("scroll", onScroll);
   onScroll();
 }
+
+// Function for toggling between light mode and dark mode
+function initThemeToggle() {
+  const toggle = document.getElementById("theme-toggle");
+  const body = document.body;
+
+  if (localStorage.getItem("theme") === "light") {
+    body.classList.add("light-mode");
+    toggle.checked = true;
+  }
+
+  toggle?.addEventListener("change", () => {
+    body.classList.toggle("light-mode");
+    localStorage.setItem(
+      "theme",
+      body.classList.contains("light-mode") ? "light" : "dark"
+    );
+  });
+}
