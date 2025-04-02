@@ -118,3 +118,25 @@ function initSmoothScrolling() {
     });
   });
 }
+
+
+// Mobile Optimization
+function initMobileMenu() {
+  const hamburger = document.getElementById("hamburger");
+  const mobileNav = document.getElementById("mobile-nav");
+
+  if (!hamburger || !mobileNav) return;
+
+  hamburger.addEventListener("click", () => {
+    mobileNav.classList.toggle("open");
+  });
+
+  document.addEventListener("click", (event) => {
+    if (
+      !hamburger.contains(event.target) &&
+      !mobileNav.contains(event.target)
+    ) {
+      mobileNav.classList.remove("open");
+    }
+  });
+}
