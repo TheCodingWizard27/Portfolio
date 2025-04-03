@@ -4,6 +4,26 @@
     box-sizing: border-box;
 }
 
+:root{
+  --primary-font: 'Oswald', sans-serif;
+  --logo-font: 'Waiting for the sunrise', sans-serif;
+
+    /* Colors - Dark Mode */
+  --bg-color: #181818;
+  --text-color: white;
+  --accent-color: #FFD700;
+  --link-hover-color: #1E90FF;
+  --project-card-bg: #1e1e1e;
+
+  /* Colors - Light Mode */
+  --light-bg: #f9f9f9;
+  --light-text: #222;
+  --light-nav-bg: white;
+  --light-project-card-bg: white;
+  --light-accent-color: #e6c200;
+
+}
+
 /* Navigation Bar */
 body{
   background-color: #181818;
