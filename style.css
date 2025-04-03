@@ -295,7 +295,7 @@ nav.scrolled {
   border-radius: 12px;
   padding: 30px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
-  max-width: 450px;
+  max-width: 550px;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   flex: 1 1 45%;
   color: white;
@@ -595,4 +595,3 @@ body.light-mode .mobile-nav {
 body.light-mode .mobile-nav a {
   color: #222;
 }
-/* Light Mode ends here */
