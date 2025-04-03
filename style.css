@@ -173,11 +173,11 @@ nav.scrolled {
 }
 
 .hero-image img {
-  width: 400px;
-  height: 400px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
   object-fit: cover;
-  background-color: transparent;
+  /* background-color: transparent; */
   box-shadow: none;
   /* filter: drop-shadow(0 0 2px #0A192F); */
 }
